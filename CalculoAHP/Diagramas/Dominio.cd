@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CalculoAHP.Domain.Criterio">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Model\Dominio\Criterio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CalculoAHP.Model.Dominio.ElementoLancamento">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <AssociationLine Name="Criterios" Type="CalculoAHP.Domain.Criterio">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.381" Y="1.728" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Model\Dominio\ElementoLancamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Criterios" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CalculoAHP.Lancamento">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Elementos" Type="CalculoAHP.Model.Dominio.ElementoLancamento">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.344" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAABAAAAAAEAAAAAAAAAABAACAAAAAEAAAA=</HashCode>
+      <FileName>Model\Dominio\Lancamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CriteriosLancamento" />
+      <Property Name="Elementos" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CalculoAHP.Modelo">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Criterios" Type="CalculoAHP.Domain.Criterio">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.216" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAGAABAAAAAAAAAAAAAAAAAAAAAAAAAAEBABA=</HashCode>
+      <FileName>Model\Dominio\Modelo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Criterios" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,75 @@
+{
+  "Id": 1,
+  "Nome": "Modelo Celular",
+  "Descricao": "Modelo Celular",
+  "Criterios": [
+    {
+      "Nome": "Preço"
+    },
+    {
+      "Nome": "Espaço"
+    },
+    {
+      "Nome": "Câmera"
+    },
+    {
+      "Nome": "Aparência"
+    }
+  ],
+  "CriteriosItems": [
+    {
+      "CriterioSelecionado": {
+        "Nome": "Preço"
+      },
+      "CriterioOpcao": {
+        "Nome": "Espaço"
+      },
+      "Importancia": 5
+    },
+    {
+      "CriterioSelecionado": {
+        "Nome": "Preço"
+      },
+      "CriterioOpcao": {
+        "Nome": "Câmera"
+      },
+      "Importancia": 2
+    },
+    {
+      "CriterioSelecionado": {
+        "Nome": "Preço"
+      },
+      "CriterioOpcao": {
+        "Nome": "Aparência"
+      },
+      "Importancia": 9
+    },
+    {
+      "CriterioSelecionado": {
+        "Nome": "Câmera"
+      },
+      "CriterioOpcao": {
+        "Nome": "Espaço"
+      },
+      "Importancia": 2
+    },
+    {
+      "CriterioSelecionado": {
+        "Nome": "Espaço"
+      },
+      "CriterioOpcao": {
+        "Nome": "Aparência"
+      },
+      "Importancia": 3
+    },
+    {
+      "CriterioSelecionado": {
+        "Nome": "Câmera"
+      },
+      "CriterioOpcao": {
+        "Nome": "Aparência"
+      },
+      "Importancia": 7
+    }
+  ]
+}

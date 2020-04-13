@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.3.1.6\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.1.6\build\Costura.Fody.props')" />
+  <Import Project="..\packages\Virtuosity.Fody.1.21.3\build\Virtuosity.Fody.props" Condition="Exists('..\packages\Virtuosity.Fody.1.21.3\build\Virtuosity.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4911528C-9EEB-4DF8-8A4D-431CD45B3C58}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CalculoAHP</RootNamespace>
+    <AssemblyName>CalculoAHP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>application_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=3.1.6.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.3.1.6\lib\net46\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.4.1.1101\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Virtuosity, Version=1.21.3.0, Culture=neutral, PublicKeyToken=8b9afd7f380a7d64, processorArchitecture=MSIL">
+      <HintPath>..\packages\Virtuosity.Fody.1.21.3\lib\net452\Virtuosity.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.4.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Enum\TipoFinalizacaoEnum.cs" />
+    <Compile Include="InformationWindow.xaml.cs">
+      <DependentUpon>InformationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Dominio\Algoritmo\Algoritmo.cs" />
+    <Compile Include="Enum\EstadoLancamentoEnum.cs" />
+    <Compile Include="Enum\CriterioOptionsEnum .cs" />
+    <Compile Include="Enum\RegistroLancamentoEnum.cs" />
+    <Compile Include="Model\Dominio\Criterio.cs" />
+    <Compile Include="Enum\RegistroModeloEnum.cs" />
+    <Compile Include="Model\Dominio\CriterioAlternativa.cs" />
+    <Compile Include="Model\Dominio\CriterioItem.cs" />
+    <Compile Include="Model\Dominio\DataSaveManager.cs" />
+    <Compile Include="Model\Dominio\ElementoLancamento.cs" />
+    <Compile Include="Model\Dominio\ItemDecisao.cs" />
+    <Compile Include="Model\Dominio\Relatorios\Relatorio.cs" />
+    <Compile Include="Model\Lancamentos\Janelas\LancamentoOpenModel.cs" />
+    <Compile Include="Model\Modelos\CriterioChoiceItem.cs" />
+    <Compile Include="Model\Lancamentos\Registro\LancamentoAlternativaModel.cs" />
+    <Compile Include="Model\Lancamentos\Registro\LancamentoNotasModel.cs" />
+    <Compile Include="Model\ModelBase.cs" />
+    <Compile Include="Model\Lancamentos\AlternativaChoiceItem.cs" />
+    <Compile Include="Model\Janelas\MainModel.cs" />
+    <Compile Include="Model\Modelos\Janelas\ModelOpenModel.cs" />
+    <Compile Include="Model\Modelos\Registro\ModeloRegistroModel.cs" />
+    <Compile Include="Model\Modelos\Registro\ModeloSelecaoModel.cs" />
+    <Compile Include="ViewModel\AlternativaItemConverter.cs" />
+    <Compile Include="ViewModel\DataGridColumnsBehavior.cs" />
+    <Compile Include="ViewModel\Dialog\DialogViewModel.cs" />
+    <Compile Include="ViewModel\EnumBooleanConverter.cs" />
+    <Compile Include="ViewModel\FocusExtension.cs" />
+    <Compile Include="ViewModel\Lancamentos\ILancamento.cs" />
+    <Compile Include="ViewModel\Lancamentos\Janelas\LancamentoOpenViewModel.cs" />
+    <Compile Include="ViewModel\Lancamentos\RegistroLancamentoMain.cs" />
+    <Compile Include="ViewModel\Lancamentos\Registro\LancamentoAlternativaViewModel.cs" />
+    <Compile Include="ViewModel\Lancamentos\Registro\LancamentoNotasViewModel.cs" />
+    <Compile Include="ViewModel\Messages\GerarDecisaoMessage.cs" />
+    <Compile Include="ViewModel\Messages\IniciarEdicaoLancamentoMessage.cs" />
+    <Compile Include="ViewModel\Messages\IniciarEdicaoModeloMessage.cs" />
+    <Compile Include="ViewModel\Messages\InserirLancamentoMessage.cs" />
+    <Compile Include="ViewModel\Messages\InserirModeloMessage.cs" />
+    <Compile Include="ViewModel\Modelos\IModel.cs" />
+    <Compile Include="ViewModel\Modelos\Janelas\ModelOpenViewModel.cs" />
+    <Compile Include="ViewModel\Modelos\RegistroModeloMain.cs" />
+    <Compile Include="ViewModel\Janelas\MainViewModel.cs" />
+    <Compile Include="ViewModel\Messages\FinalizarRegistroMessage.cs" />
+    <Compile Include="ViewModel\Messages\SwitchViewMessage.cs" />
+    <Compile Include="ViewModel\Modelos\Registro\ModeloSelecaoViewModel.cs" />
+    <Compile Include="ViewModel\Modelos\Registro\ModeloRegistroViewModel.cs" />
+    <Compile Include="Enum\RadioOptionsEnum.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="ViewModel\Janelas\WindowManager.cs" />
+    <Compile Include="Views\Dialog\Dialog.xaml.cs">
+      <DependentUpon>Dialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lancamentos\Janelas\LancamentoCreateWindow.xaml.cs">
+      <DependentUpon>LancamentoCreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lancamentos\Janelas\LancamentoOpenWindow.xaml.cs">
+      <DependentUpon>LancamentoOpenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lancamentos\Registro\LancamentoAlternativaView.xaml.cs">
+      <DependentUpon>LancamentoAlternativaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Lancamentos\Registro\LancamentoNotasView.xaml.cs">
+      <DependentUpon>LancamentoNotasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modelos\Registro\ModeloRegistroView.xaml.cs">
+      <DependentUpon>ModeloRegistroView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modelos\Registro\ModeloSelecaoView.xaml.cs">
+      <DependentUpon>ModeloSelecaoView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="InformationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Dominio\Lancamento.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\Dialog\Dialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Lancamentos\Janelas\LancamentoCreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lancamentos\Janelas\LancamentoOpenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lancamentos\Registro\LancamentoAlternativaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lancamentos\Registro\LancamentoNotasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Modelos\Janelas\ModelCreateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Modelos\Janelas\ModelOpenWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Modelos\Registro\ModeloRegistroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Modelos\Registro\ModeloSelecaoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\Modelos\Janelas\ModelCreateWindow.xaml.cs">
+      <DependentUpon>ModelCreateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Dominio\Modelo.cs" />
+    <Compile Include="Views\Modelos\Janelas\ModelOpenWindow.xaml.cs">
+      <DependentUpon>ModelOpenWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Diagramas\Lancamento.cd" />
+    <None Include="Diagramas\Modelo.cd" />
+    <None Include="Diagramas\Dominio.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\card-image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\lancamentos-modelo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\criacao-modelo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\visualizar-lancamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\editar-modelo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\criar-lancamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\editar-lancamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="application_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.3.2.17\build\Fody.targets" Condition="Exists('..\packages\Fody.3.2.17\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.3.2.17\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.3.2.17\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Virtuosity.Fody.1.21.3\build\Virtuosity.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Virtuosity.Fody.1.21.3\build\Virtuosity.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.3.1.6\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.1.6\build\Costura.Fody.props'))" />
+  </Target>
+</Project>

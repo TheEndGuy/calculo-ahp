@@ -1,0 +1,218 @@
+{
+  "Id": 1,
+  "Nome": "Lançamento 1",
+  "DataLancamento": "2018-11-08T00:00:00",
+  "Descricao": "Descrição lançamento 1",
+  "Estado": 1,
+  "Modelo": {
+    "Id": 1,
+    "Nome": "Modelo Celular",
+    "Descricao": "Modelo Celular",
+    "Criterios": [
+      {
+        "Nome": "Preço"
+      },
+      {
+        "Nome": "Espaço"
+      },
+      {
+        "Nome": "Câmera"
+      },
+      {
+        "Nome": "Aparência"
+      }
+    ],
+    "CriteriosItems": [
+      {
+        "CriterioSelecionado": {
+          "Nome": "Preço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Espaço"
+        },
+        "Importancia": 5
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Preço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Câmera"
+        },
+        "Importancia": 2
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Preço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Aparência"
+        },
+        "Importancia": 9
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Câmera"
+        },
+        "CriterioOpcao": {
+          "Nome": "Espaço"
+        },
+        "Importancia": 2
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Espaço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Aparência"
+        },
+        "Importancia": 3
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Câmera"
+        },
+        "CriterioOpcao": {
+          "Nome": "Aparência"
+        },
+        "Importancia": 7
+      }
+    ]
+  },
+  "Elementos": [
+    {
+      "Nome": "Produto 1",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 1
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 5
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 3
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 3
+        }
+      ]
+    },
+    {
+      "Nome": "Produto 2",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 2
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 4
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 3
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 1
+        }
+      ]
+    },
+    {
+      "Nome": "Produto 3",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 5
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 8
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 4
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 9
+        }
+      ]
+    },
+    {
+      "Nome": "Produto 4",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 6
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 2
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 4
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 5
+        }
+      ]
+    }
+  ],
+  "ItensDecisao": [
+    {
+      "Nome": "Produto 1",
+      "Peso": 2.1832587513533017
+    },
+    {
+      "Nome": "Produto 2",
+      "Peso": 2.4963466859136294
+    },
+    {
+      "Nome": "Produto 3",
+      "Peso": 5.2936827859978344
+    },
+    {
+      "Nome": "Produto 4",
+      "Peso": 4.8643825935282088
+    }
+  ]
+}

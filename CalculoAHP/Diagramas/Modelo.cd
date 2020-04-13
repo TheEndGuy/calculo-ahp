@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CalculoAHP.ViewModel.ModeloRegistroViewModel" Collapsed="true">
+    <Position X="2.75" Y="9" Width="2.25" />
+    <AssociationLine Name="Model" Type="CalculoAHP.Model.Modelos.Registro.ModeloRegistroModel">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.339" Height="0.182" Width="0.808" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAEAIIAAAAEAAAAAAAAAIBgAAEAAAAE=</HashCode>
+      <FileName>ViewModel\Modelos\Registro\ModeloRegistroViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Model" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CalculoAHP.Model.Modelos.Registro.ModeloRegistroModel" Collapsed="true">
+    <Position X="3" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAQEAABAAAAAAAAAAAAAAAAAAAKIQgAQAEACAA=</HashCode>
+      <FileName>Model\Modelos\Registro\ModeloRegistroModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CalculoAHP.ViewModel.ModeloSelecaoViewModel" Collapsed="true">
+    <Position X="5.75" Y="9" Width="2.25" />
+    <AssociationLine Name="Model" Type="CalculoAHP.Model.Modelos.Registro.ModeloSelecaoModel">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.12" Y="0.35" Height="0.182" Width="0.648" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAgAAAAAAAAAAAAAAAACAQAgAAgAAEAAAAA=</HashCode>
+      <FileName>ViewModel\Modelos\Registro\ModeloSelecaoViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Model" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CalculoAHP.Model.Modelos.Registro.ModeloSelecaoModel" Collapsed="true">
+    <Position X="6" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAQAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Modelos\Registro\ModeloSelecaoModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CalculoAHP.Model.Modelos.Janelas.ModelOpenModel" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAwAAAABAAA=</HashCode>
+      <FileName>Model\Modelos\Janelas\ModelOpenModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CalculoAHP.ViewModel.Modelos.ModelOpenViewModel" Collapsed="true">
+    <Position X="9" Y="9" Width="2" />
+    <AssociationLine Name="Model" Type="CalculoAHP.Model.Modelos.Janelas.ModelOpenModel">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.072" Y="0.266" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgBAAAAAAAAIAAAAAAAAAAAAAAEAAAAgAEAAAAQA=</HashCode>
+      <FileName>ViewModel\Modelos\Janelas\ModelOpenViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Model" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="CalculoAHP.Views.LancamentoNotasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewmodel="clr-namespace:CalculoAHP.ViewModel"
+             xmlns:local="clr-namespace:CalculoAHP.ViewModel"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+             mc:Ignorable="d" 
+             d:DesignHeight="340"
+             d:DesignWidth="500"
+             DataContext="{Binding RegistroNotasLancamento, Source={StaticResource Locator}}"
+             Background="White">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="KeyDown">
+            <cmd:EventToCommand Command="{Binding OnKeyPressed}" PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <Grid>
+
+        <TextBlock Opacity="0.8" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,8,230,0" FontSize="13"> F1 - Retornar |</TextBlock>
+        <TextBlock Opacity="0.8" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,8,0,0" FontSize="13"> F2 - Visualizar decisão |</TextBlock>
+        <TextBlock Opacity="0.8" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="220,8,0,0" FontSize="13"> F3 - Finalizar</TextBlock>
+
+        <Border
+            BorderThickness="1"
+            BorderBrush="#51abb9"
+            Width="470"
+            Height="250"
+            Margin="0,0,0,20"
+            ClipToBounds="True">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                            Height="*" />
+                    <RowDefinition
+                            Height="Auto" />
+                </Grid.RowDefinitions>
+                <DataGrid
+                    VirtualizingPanel.IsVirtualizing="False"
+                    viewmodel:FocusExtension.IsFocused="True"
+                    IsReadOnly="True"
+                    ItemsSource="{Binding Model.Items}"
+                    local:DataGridColumnsBehavior.BindableColumns="{Binding Model.ColumnCollection}"
+                    AutoGenerateColumns="False"
+                    CanUserAddRows="False"
+                    CanUserReorderColumns="False"
+                    CanUserSortColumns="False"
+                    CurrentCell="{Binding Model.CellInfo, Mode=OneWayToSource}">
+                </DataGrid>
+                <materialDesign:ColorZone
+                        Mode="PrimaryMid"
+                        Grid.Row="1"
+                        Background="#51abb9"
+                        Effect="{DynamicResource MaterialDesignShadowDepth5}">
+                    <TextBlock
+                        Margin="16"
+                        FontSize="14"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                        Atribuição de notas as alternativas
+                    </TextBlock>
+                </materialDesign:ColorZone>
+
+            </Grid>
+        </Border>
+        <StackPanel
+            Height="40"
+            VerticalAlignment="Bottom">
+            <Button
+                Height="25"
+                Width="90"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="20,5,0,0"
+                Content="Retornar"
+                FontSize="12"
+                Background="#51abb9"
+                BorderBrush="#51abb9"
+                Command="{Binding ReturnScreen}">
+            </Button>
+
+            <Button
+                Command="{Binding Decisao}"
+                Height="25"
+                Width="130"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Foreground="White"
+                Margin="0,-25,0,0"
+                Content="Visualizar decisão"
+                FontSize="12"
+                Background="#C77492"
+                BorderBrush="#C77492">
+            </Button>
+
+            <Button
+                Command="{Binding FinishRegister}"
+                Height="25"
+                Width="100"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0,-25,20,0"
+                Content="Finalizar"
+                FontSize="12"
+                Background="#51b98a"
+                BorderBrush="#51b98a">
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

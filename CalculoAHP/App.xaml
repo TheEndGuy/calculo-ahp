@@ -1,0 +1,45 @@
+<Application x:Class="CalculoAHP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:CalculoAHP"
+             StartupUri="MainWindow.xaml" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d1p1:Ignorable="d"
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:CalculoAHP.ViewModel"
+             xmlns:views="clr-namespace:CalculoAHP.Views">
+    
+  <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <!-- throw in some extra colour for our floating action button -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Green.Named.Primary.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- MVVM Light -->
+            <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+            <DataTemplate DataType="{x:Type vm:ModeloRegistroViewModel}">
+                <views:ModeloRegistroView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ModeloSelecaoViewModel}">
+                <views:ModeloSelecaoView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:LancamentoAlternativaViewModel}">
+                <views:LancamentoAlternativaView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:LancamentoNotasViewModel}">
+                <views:LancamentoNotasView />
+            </DataTemplate>
+            <!---->
+            
+    </ResourceDictionary>
+  </Application.Resources>
+    
+</Application>

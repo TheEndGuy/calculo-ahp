@@ -1,0 +1,185 @@
+{
+  "Id": 3,
+  "Nome": "fsdfds",
+  "DataLancamento": "0001-01-01T00:00:00",
+  "Descricao": "fdsfds",
+  "Estado": 0,
+  "Modelo": {
+    "Id": 1,
+    "Nome": "Modelo Celular",
+    "Descricao": "Modelo Celular",
+    "Criterios": [
+      {
+        "Nome": "Preço"
+      },
+      {
+        "Nome": "Espaço"
+      },
+      {
+        "Nome": "Câmera"
+      },
+      {
+        "Nome": "Aparência"
+      }
+    ],
+    "CriteriosItems": [
+      {
+        "CriterioSelecionado": {
+          "Nome": "Preço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Espaço"
+        },
+        "Importancia": 5
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Preço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Câmera"
+        },
+        "Importancia": 2
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Preço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Aparência"
+        },
+        "Importancia": 9
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Câmera"
+        },
+        "CriterioOpcao": {
+          "Nome": "Espaço"
+        },
+        "Importancia": 2
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Espaço"
+        },
+        "CriterioOpcao": {
+          "Nome": "Aparência"
+        },
+        "Importancia": 3
+      },
+      {
+        "CriterioSelecionado": {
+          "Nome": "Câmera"
+        },
+        "CriterioOpcao": {
+          "Nome": "Aparência"
+        },
+        "Importancia": 7
+      }
+    ]
+  },
+  "Elementos": [
+    {
+      "Nome": "fdsfs",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 1
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 2
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 6
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 5
+        }
+      ]
+    },
+    {
+      "Nome": "fdsaf",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 1
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 3
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 1
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 4
+        }
+      ]
+    },
+    {
+      "Nome": "fdsafdsa",
+      "Criterios": [
+        {
+          "Criterio": {
+            "Nome": "Preço"
+          },
+          "Importancia": 6
+        },
+        {
+          "Criterio": {
+            "Nome": "Espaço"
+          },
+          "Importancia": 2
+        },
+        {
+          "Criterio": {
+            "Nome": "Câmera"
+          },
+          "Importancia": 1
+        },
+        {
+          "Criterio": {
+            "Nome": "Aparência"
+          },
+          "Importancia": 1
+        }
+      ]
+    }
+  ],
+  "ItensDecisao": [
+    {
+      "Nome": "fdsfs",
+      "Peso": 2.5039339036028396
+    },
+    {
+      "Nome": "fdsaf",
+      "Peso": 1.538760869203784
+    },
+    {
+      "Nome": "fdsafdsa",
+      "Peso": 3.852344256571401
+    }
+  ]
+}
